@@ -13,6 +13,6 @@ public class Main {
         garage.addBil(bil3);
 
         System.out.println(garage.bilpark);
-        System.out.println(garage.beregnGroenAfgiftForBilpark());
+        System.out.println("Total green property tax:" + garage.beregnGroenAfgiftForBilpark());
         }
 }
