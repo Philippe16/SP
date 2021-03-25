@@ -13,26 +13,24 @@ public class Elbil extends Bil{
         this.maxKm = maxKm;
         this.whPrKm = whPrKm;
     }
-    public double beregnGroenEjerafgift() {
-        double kmPrl = 100/(whPrKm/91.25);
+    public double beregnGroenEjerafgift(){
+      double groenEjerafgift = 0;
+      double kmPrL = 100 / (whPrKm / 91.25);
 
-        if(kmPrl >= 20 && kmPrl < 50){
-            kmPrl = 330;
+      if(kmPrL >= 20 && kmPrL < 50 || kmPrL > 50){
+         groenEjerafgift = 330;
+      }else if(kmPrL >= 15 && kmPrL < 20){
+         groenEjerafgift = 1050;
+      }else if(kmPrL >= 10 && kmPrL < 15){
+         groenEjerafgift = 2340;
+      }else if(kmPrL >= 5 && kmPrL < 10){
+         groenEjerafgift = 5500;
+      }else if(kmPrL < 5){
+         groenEjerafgift = 10470;
+      }
 
-        }else if(kmPrl >= 15 && kmPrl < 20){
-            kmPrl = 1050;
-
-        }else if(kmPrl >= 10 && kmPrl < 15){
-            kmPrl = 2340;
-
-        }else if(kmPrl >= 5 && kmPrl< 10){
-            kmPrl = 5500;
-
-        }else if(kmPrl < 5){
-            kmPrl = 10470;
-        }
-        return kmPrl;
-    }
+      return groenEjerafgift ;
+   }
 
 
 
